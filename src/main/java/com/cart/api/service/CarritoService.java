@@ -28,7 +28,6 @@ public class CarritoService {
 		String message = "Producto agregado al carrito de forma satisfactoria.";
 
 		try {
-			System.out.println("productoService => " + productoService);
 			Producto producto = productoService.getProducto(idProducto);
 			producto.setCantidad(cantidad);
 			carrito.agregarProducto(producto);

@@ -88,7 +88,6 @@ public class ProductoService {
 
 	public Producto getProducto(UUID idProducto) {
 		if(productoExistente(idProducto)) {
-			System.out.println("$$$$$$$$$$$ Existe el producto que quiero agregar al carrito.");
 			return productos.stream().filter(producto -> producto.getId().equals(idProducto)).findFirst().get();
 		} else {
 			throw new RuntimeException("Producto inexistente.");
